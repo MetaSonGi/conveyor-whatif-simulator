@@ -1,0 +1,223 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>컨베이어 공정 병목 비교기</title><style>body{font:16px/1.6 system-ui;max-width:1000px;margin:32px auto;padding:20px;background:#101b2b;color:#ecf4ff}pre{padding:24px;background:#192b40;border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere}h1{color:#80e4c5}</style><h1>컨베이어 공정 병목 비교기</h1><p>오프라인 샘플 계산 결과 · 실물 장비 연결 없음</p><pre>{
+  &quot;baseline&quot;: {
+    &quot;makespan_s&quot;: 30,
+    &quot;throughput_per_minute&quot;: 10.0,
+    &quot;average_lead_time_s&quot;: 15.4,
+    &quot;stations&quot;: [
+      {
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;average_queue_wait_s&quot;: 0.0
+      },
+      {
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;average_queue_wait_s&quot;: 7.8
+      }
+    ],
+    &quot;timeline&quot;: [
+      {
+        &quot;job_id&quot;: &quot;job-1&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 0,
+        &quot;start_s&quot;: 0,
+        &quot;end_s&quot;: 2,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-2&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 2,
+        &quot;start_s&quot;: 2,
+        &quot;end_s&quot;: 4,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-3&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 4,
+        &quot;start_s&quot;: 4,
+        &quot;end_s&quot;: 6,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-4&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 6,
+        &quot;start_s&quot;: 6,
+        &quot;end_s&quot;: 8,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-5&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 8,
+        &quot;start_s&quot;: 8,
+        &quot;end_s&quot;: 10,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-1&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 2,
+        &quot;start_s&quot;: 2,
+        &quot;end_s&quot;: 7,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-2&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 4,
+        &quot;start_s&quot;: 7,
+        &quot;end_s&quot;: 15,
+        &quot;queue_wait_s&quot;: 3
+      },
+      {
+        &quot;job_id&quot;: &quot;job-3&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 6,
+        &quot;start_s&quot;: 15,
+        &quot;end_s&quot;: 20,
+        &quot;queue_wait_s&quot;: 9
+      },
+      {
+        &quot;job_id&quot;: &quot;job-4&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 8,
+        &quot;start_s&quot;: 20,
+        &quot;end_s&quot;: 25,
+        &quot;queue_wait_s&quot;: 12
+      },
+      {
+        &quot;job_id&quot;: &quot;job-5&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 10,
+        &quot;start_s&quot;: 25,
+        &quot;end_s&quot;: 30,
+        &quot;queue_wait_s&quot;: 15
+      }
+    ]
+  },
+  &quot;candidate&quot;: {
+    &quot;makespan_s&quot;: 20,
+    &quot;throughput_per_minute&quot;: 15.0,
+    &quot;average_lead_time_s&quot;: 10.2,
+    &quot;stations&quot;: [
+      {
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;average_queue_wait_s&quot;: 0.0
+      },
+      {
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;average_queue_wait_s&quot;: 2.0
+      }
+    ],
+    &quot;timeline&quot;: [
+      {
+        &quot;job_id&quot;: &quot;job-1&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 0,
+        &quot;start_s&quot;: 0,
+        &quot;end_s&quot;: 2,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-2&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 2,
+        &quot;start_s&quot;: 2,
+        &quot;end_s&quot;: 4,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-3&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 4,
+        &quot;start_s&quot;: 4,
+        &quot;end_s&quot;: 6,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-4&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 6,
+        &quot;start_s&quot;: 6,
+        &quot;end_s&quot;: 8,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-5&quot;,
+        &quot;station_id&quot;: &quot;load&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 8,
+        &quot;start_s&quot;: 8,
+        &quot;end_s&quot;: 10,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-1&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 2,
+        &quot;start_s&quot;: 2,
+        &quot;end_s&quot;: 7,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-2&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 1,
+        &quot;arrival_s&quot;: 4,
+        &quot;start_s&quot;: 4,
+        &quot;end_s&quot;: 12,
+        &quot;queue_wait_s&quot;: 0
+      },
+      {
+        &quot;job_id&quot;: &quot;job-3&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 6,
+        &quot;start_s&quot;: 7,
+        &quot;end_s&quot;: 15,
+        &quot;queue_wait_s&quot;: 1
+      },
+      {
+        &quot;job_id&quot;: &quot;job-4&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 1,
+        &quot;arrival_s&quot;: 8,
+        &quot;start_s&quot;: 12,
+        &quot;end_s&quot;: 17,
+        &quot;queue_wait_s&quot;: 4
+      },
+      {
+        &quot;job_id&quot;: &quot;job-5&quot;,
+        &quot;station_id&quot;: &quot;robot&quot;,
+        &quot;server&quot;: 0,
+        &quot;arrival_s&quot;: 10,
+        &quot;start_s&quot;: 15,
+        &quot;end_s&quot;: 20,
+        &quot;queue_wait_s&quot;: 5
+      }
+    ]
+  },
+  &quot;makespan_saved_s&quot;: 10,
+  &quot;assumptions&quot;: [
+    &quot;unlimited_buffers&quot;,
+    &quot;deterministic_process_times&quot;,
+    &quot;preempt_resume_downtime&quot;,
+    &quot;no_real_actuation&quot;
+  ]
+}</pre></html>

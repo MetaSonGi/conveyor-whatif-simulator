@@ -1,0 +1,60 @@
+{
+  "jobs": [
+    {
+      "id": "job-1",
+      "arrival_s": 0
+    },
+    {
+      "id": "job-2",
+      "arrival_s": 2
+    },
+    {
+      "id": "job-3",
+      "arrival_s": 4
+    },
+    {
+      "id": "job-4",
+      "arrival_s": 6
+    },
+    {
+      "id": "job-5",
+      "arrival_s": 8
+    }
+  ],
+  "baseline": [
+    {
+      "id": "load",
+      "process_s": 2,
+      "servers": 1
+    },
+    {
+      "id": "robot",
+      "process_s": 5,
+      "servers": 1,
+      "downtime": [
+        [
+          8,
+          11
+        ]
+      ]
+    }
+  ],
+  "candidate": [
+    {
+      "id": "load",
+      "process_s": 2,
+      "servers": 1
+    },
+    {
+      "id": "robot",
+      "process_s": 5,
+      "servers": 2,
+      "downtime": [
+        [
+          8,
+          11
+        ]
+      ]
+    }
+  ]
+}
